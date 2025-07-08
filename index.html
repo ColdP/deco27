@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DECO*27 - Sound Producer Fan Page</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to apply the Inter font and create the collage effect */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f0;
+            color: #333;
+        }
+        
+        /* Style for the white SVG icons in the footer */
+        .icon-white {
+            filter: brightness(0) invert(1);
+        }
+
+        /* A pseudo-element to create a "taped" look on sections */
+        .taped-section::before {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 30px;
+            background-color: rgba(255, 224, 130, 0.5); /* Semi-transparent yellow for a tape look */
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            border-left: 1px dashed rgba(0,0,0,0.1);
+            border-right: 1px dashed rgba(0,0,0,0.1);
+        }
+        
+        /* Add a slight rotation to images for the collage feel */
+        .rotate-neg-1 {
+            transform: rotate(-1deg);
+        }
+        .rotate-pos-1 {
+            transform: rotate(1deg);
+        }
+        .rotate-neg-2 {
+            transform: rotate(-2deg);
+        }
+        .rotate-pos-2 {
+            transform: rotate(2deg);
+        }
+        
+        /* Modal styles */
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        .modal-content {
+            max-height: 90vh;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <div class="relative inline-block">
+                <div class="absolute -top-4 -left-4 w-full h-full bg-pink-200 transform rotate-neg-2 rounded-full"></div>
+                <img 
+                    src="https://imgs.ototoy.jp/imgs/them/06/77/92/0000057692.1710144973_480.jpg" 
+                    alt="DECO*27 Avatar" 
+                    class="relative w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-lg border-4 border-white mx-auto rotate-pos-1"
+                    onerror="this.onerror=null;this.src='https://placehold.co/192x192/f4f4f0/333333?text=DECO*27';"
+                >
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold mt-6">DECO*27</h1>
+            <p class="text-lg md:text-xl text-gray-600">SOUND PRODUCER</p>
+            
+            <!-- Social Media Links -->
+            <div class="flex justify-center space-x-6 mt-6">
+                <a href="https://www.youtube.com/@DECO27" target="_blank" class="transform hover:scale-110 transition-transform"><img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/icon_youtube.svg" alt="YouTube" class="w-8 h-8"></a>
+                <a href="https://x.com/deco27" target="_blank" class="transform hover:scale-110 transition-transform"><img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/icon_x.svg" alt="X" class="w-8 h-8"></a>
+                <a href="https://www.instagram.com/deco27_39/" target="_blank" class="transform hover:scale-110 transition-transform"><img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/icon_instagram.svg" alt="Instagram" class="w-8 h-8"></a>
+                <a href="https://www.tiktok.com/@deco27_official" target="_blank" class="transform hover:scale-110 transition-transform"><img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/icon_tiktok.svg" alt="TikTok" class="w-8 h-8"></a>
+            </div>
+        </header>
+
+        <!-- Profile Section -->
+        <section class="mb-20 relative">
+            <div class="bg-white p-8 md:p-10 rounded-lg shadow-xl relative taped-section rotate-neg-1">
+                <h2 class="text-3xl font-bold mb-6 text-center">PROFILE</h2>
+                <p class="text-base md:text-lg leading-relaxed text-gray-700 mb-4">
+                    ロックやエレクトロニックをベースにジャンルレスなミクスチャーサウンドとポップ＆キャッチーなメロディー。「愛」や「恋」といった万人が持つ感情を独特な言葉遊びで表現し、一聴しただけで思わず口ずさんでしまう歌詞が10代~20代の若い世代に圧倒的な支持を得ている。
+                </p>
+                <p class="text-base md:text-lg leading-relaxed text-gray-700">
+                    2008年10月よりVOCALOIDを使用した作品を動画共有サイトに投稿開始。これまで公開されたDECO*27の楽曲の関連動画を含む総再生回数は10億を超える。様々なアーティストへの楽曲提供、作詞、タイアップ・ソングなどを手がけるのと並行して、活動の原点であるVOCALOID楽曲を自身の最新作へ向けた布石として発表し続ける。
+                </p>
+            </div>
+        </section>
+
+        <!-- Discography Section -->
+        <section class="mb-20">
+            <h2 class="text-4xl font-extrabold text-center mb-12">DISCOGRAPHY</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+                <!-- Album Item 1 -->
+                <div class="text-center group bg-white p-4 rounded-lg shadow-lg rotate-pos-1 cursor-pointer" data-modal-target="modal-1">
+                    <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/1st_JK_Soaiseiriron.webp" alt="相愛性理論 Cover" class="w-full rounded-md transform group-hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x300/ffffff/333333?text=相愛性理論';">
+                    <p class="mt-3 text-xs md:text-sm text-gray-600">1st Album</p>
+                    <h3 class="font-bold text-sm md:text-base leading-tight">相愛性理論</h3>
+                </div>
+                <!-- Album Item 2 -->
+                <div class="text-center group bg-white p-4 rounded-lg shadow-lg rotate-neg-2 cursor-pointer" data-modal-target="modal-2">
+                    <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/2nd_JK_AimaiElegy.webp" alt="愛迷エレジー Cover" class="w-full rounded-md transform group-hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x300/ffffff/333333?text=愛迷エレジー';">
+                    <p class="mt-3 text-xs md:text-sm text-gray-600">2nd Album</p>
+                    <h3 class="font-bold text-sm md:text-base leading-tight">愛迷エレジー</h3>
+                </div>
+                <!-- Album Item 3 -->
+                <div class="text-center group bg-white p-4 rounded-lg shadow-lg rotate-pos-1 cursor-pointer" data-modal-target="modal-3">
+                    <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/3rd_JK_LoveCalender.webp" alt="ラブカレンダー Cover" class="w-full rounded-md transform group-hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x300/ffffff/333333?text=ラブカレンダー';">
+                    <p class="mt-3 text-xs md:text-sm text-gray-600">3rd Album</p>
+                    <h3 class="font-bold text-sm md:text-base leading-tight">ラブカレンダー</h3>
+                </div>
+                <!-- Album Item Collection -->
+                <div class="text-center group bg-white p-4 rounded-lg shadow-lg rotate-neg-1 cursor-pointer" data-modal-target="modal-collection">
+                    <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/JK_DECObest.webp" alt="DECO*27 VOCALOID COLLECTION 2008~2012 Cover" class="w-full rounded-md transform group-hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x300/ffffff/333333?text=VOCALOID+COLLECTION';">
+                    <p class="mt-3 text-xs md:text-sm text-gray-600">Collection Album</p>
+                    <h3 class="font-bold text-sm md:text-base leading-tight">DECO*27 VOCALOID COLLECTION 2008~2012</h3>
+                </div>
+                <!-- Album Item 4 -->
+                <div class="text-center group bg-white p-4 rounded-lg shadow-lg rotate-pos-2 cursor-pointer" data-modal-target="modal-4">
+                    <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/4th_JK_continew.webp" alt="Conti New Cover" class="w-full rounded-md transform group-hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x300/ffffff/333333?text=Conti+New';">
+                    <p class="mt-3 text-xs md:text-sm text-gray-600">4th Album</p>
+                    <h3 class="font-bold text-sm md:text-base leading-tight">Conti New</h3>
+                </div>
+                <!-- Album Item 5 -->
+                <div class="text-center group bg-white p-4 rounded-lg shadow-lg rotate-neg-1 cursor-pointer" data-modal-target="modal-5">
+                    <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/5th_JK_GHOST.webp" alt="GHOST Cover" class="w-full rounded-md transform group-hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x300/ffffff/333333?text=GHOST';">
+                    <p class="mt-3 text-xs md:text-sm text-gray-600">5th Album</p>
+                    <h3 class="font-bold text-sm md:text-base leading-tight">GHOST</h3>
+                </div>
+                 <!-- Album Item 6 -->
+                <div class="text-center group bg-white p-4 rounded-lg shadow-lg rotate-pos-1 cursor-pointer" data-modal-target="modal-6">
+                    <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/6th_JK_AndroidGirl.webp" alt="アンドロイドガール Cover" class="w-full rounded-md transform group-hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x300/ffffff/333333?text=アンドロイドガール';">
+                    <p class="mt-3 text-xs md:text-sm text-gray-600">6th Album</p>
+                    <h3 class="font-bold text-sm md:text-base leading-tight">アンドロイドガール</h3>
+                    <a href="https://nbcuni-music.com/deco27/ag/" target="_blank" class="text-xs inline-block bg-pink-500 text-white px-3 py-1 rounded-full mt-2 hover:bg-pink-600 transition-colors" onclick="event.stopPropagation()">Official Site</a>
+                </div>
+                 <!-- Album Item 7 -->
+                <div class="text-center group bg-white p-4 rounded-lg shadow-lg rotate-neg-2 cursor-pointer" data-modal-target="modal-7">
+                    <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/7th_JK_UndeadAlice.webp" alt="アンデッドアリス Cover" class="w-full rounded-md transform group-hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x300/ffffff/333333?text=アンデッドアリス';">
+                    <p class="mt-3 text-xs md:text-sm text-gray-600">7th Album</p>
+                    <h3 class="font-bold text-sm md:text-base leading-tight">アンデッドアリス</h3>
+                    <div class="flex flex-wrap justify-center gap-2 mt-2" onclick="event.stopPropagation()">
+                        <a href="https://nbcuni-music.com/deco27/ua/" target="_blank" class="text-xs inline-block bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600 transition-colors">Official Site</a>
+                        <a href="https://zula.lnk.to/cvQK1YQF" target="_blank" class="text-xs inline-block bg-green-500 text-white px-3 py-1 rounded-full hover:bg-green-600 transition-colors">Stream / DL</a>
+                    </div>
+                </div>
+                <!-- Album Item 8 -->
+                <div class="text-center group bg-white p-4 rounded-lg shadow-lg rotate-pos-1 cursor-pointer" data-modal-target="modal-8">
+                    <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/8th_JK_MANNEQUIN.webp" alt="MANNEQUIN Cover" class="w-full rounded-md transform group-hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x300/ffffff/333333?text=MANNEQUIN';">
+                    <p class="mt-3 text-xs md:text-sm text-gray-600">8th Album</p>
+                    <h3 class="font-bold text-sm md:text-base leading-tight">MANNEQUIN</h3>
+                    <div class="flex flex-wrap justify-center gap-2 mt-2" onclick="event.stopPropagation()">
+                        <a href="https://nbcuni-music.com/deco27/mq/" target="_blank" class="text-xs inline-block bg-purple-500 text-white px-3 py-1 rounded-full hover:bg-purple-600 transition-colors">Official Site</a>
+                        <a href="https://nex-tone.link/A00094938" target="_blank" class="text-xs inline-block bg-green-500 text-white px-3 py-1 rounded-full hover:bg-green-600 transition-colors">Stream / DL</a>
+                    </div>
+                </div>
+                <!-- Album Item 9 -->
+                <div class="text-center group bg-white p-4 rounded-lg shadow-lg rotate-neg-1 cursor-pointer" data-modal-target="modal-9">
+                    <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/9th_JK_TRANSFORM.webp" alt="TRANSFORM Cover" class="w-full rounded-md transform group-hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x300/ffffff/333333?text=TRANSFORM';">
+                    <p class="mt-3 text-xs md:text-sm text-gray-600">9th Album</p>
+                    <h3 class="font-bold text-sm md:text-base leading-tight">TRANSFORM</h3>
+                    <div class="flex flex-wrap justify-center gap-2 mt-2" onclick="event.stopPropagation()">
+                        <a href="https://nbcuni-music.com/deco27/" target="_blank" class="text-xs inline-block bg-yellow-500 text-white px-3 py-1 rounded-full hover:bg-yellow-600 transition-colors">Official Site</a>
+                        <a href="https://karent.jp/album/4411" target="_blank" class="text-xs inline-block bg-green-500 text-white px-3 py-1 rounded-full hover:bg-green-600 transition-colors">Stream / DL</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-extrabold text-center mb-12">WORKS</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Work Item -->
+                <div class="bg-white rounded-lg shadow-lg p-4 transform rotate-neg-1 hover:rotate-0 hover:scale-105 transition-transform">
+                    <a href="https://www.youtube.com/watch?v=-2KzcaiyBFo" target="_blank">
+                        <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/tn_bp.jpg" alt="ブループラネット" class="rounded-md w-full" onerror="this.onerror=null;this.src='https://placehold.co/400x225/ffffff/333333?text=ブループラネット';">
+                    </a>
+                    <h3 class="font-bold text-lg mt-3">ブループラネット</h3>
+                    <p class="text-sm text-gray-600">初音ミク16周年記念曲</p>
+                </div>
+                <!-- Work Item -->
+                <div class="bg-white rounded-lg shadow-lg p-4 transform rotate-pos-1 hover:rotate-0 hover:scale-105 transition-transform">
+                    <a href="https://www.youtube.com/@MilgramOfficial" target="_blank">
+                        <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/tn_mlg.jpg" alt="MILGRAM" class="rounded-md w-full" onerror="this.onerror=null;this.src='https://placehold.co/400x225/ffffff/333333?text=MILGRAM';">
+                    </a>
+                    <h3 class="font-bold text-lg mt-3">MILGRAM</h3>
+                    <p class="text-sm text-gray-600">作詞 / 作曲 / プロデュース</p>
+                </div>
+                <!-- Work Item -->
+                <div class="bg-white rounded-lg shadow-lg p-4 transform rotate-neg-2 hover:rotate-0 hover:scale-105 transition-transform">
+                    <a href="https://holo27.com/" target="_blank">
+                        <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/tn_holo27.png" alt="holo*27 Project" class="rounded-md w-full" onerror="this.onerror=null;this.src='https://placehold.co/400x225/ffffff/333333?text=holo*27';">
+                    </a>
+                    <h3 class="font-bold text-lg mt-3">holo*27 Project</h3>
+                    <p class="text-sm text-gray-600">作詞 / 作曲 / プロデュース</p>
+                </div>
+                <!-- Work Item -->
+                <div class="bg-white rounded-lg shadow-lg p-4 transform rotate-pos-1 hover:rotate-0 hover:scale-105 transition-transform">
+                    <a href="https://www.usj.co.jp/company/news/2023/0706.html" target="_blank">
+                        <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/tn_pjhp.png" alt="ポケモン・ジャンピン・ハロウィーン・パーティ" class="rounded-md w-full" onerror="this.onerror=null;this.src='https://placehold.co/400x225/ffffff/333333?text=ポケモン';">
+                    </a>
+                    <h3 class="font-bold text-lg mt-3">ポケモン・ジャンピン・ハロウィーン・パーティ</h3>
+                    <p class="text-sm text-gray-600">作詞 / 作曲 / プロデュース</p>
+                </div>
+                <!-- Work Item -->
+                <div class="bg-white rounded-lg shadow-lg p-4 transform rotate-neg-1 hover:rotate-0 hover:scale-105 transition-transform">
+                    <a href="https://youtu.be/YnSW8ian29w" target="_blank">
+                        <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/tn_odo.png" alt="踊 - Ado" class="rounded-md w-full" onerror="this.onerror=null;this.src='https://placehold.co/400x225/ffffff/333333?text=踊+-+Ado';">
+                    </a>
+                    <h3 class="font-bold text-lg mt-3">踊 - Ado</h3>
+                    <p class="text-sm text-gray-600">作詞</p>
+                </div>
+                <!-- Work Item -->
+                <div class="bg-white rounded-lg shadow-lg p-4 transform rotate-pos-2 hover:rotate-0 hover:scale-105 transition-transform">
+                    <a href="https://youtu.be/mpWnhkMLIu4" target="_blank">
+                        <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/artist/tn_name.png" alt="NAME - 綴" class="rounded-md w-full" onerror="this.onerror=null;this.src='https://placehold.co/400x225/ffffff/333333?text=NAME+-+綴';">
+                    </a>
+                    <h3 class="font-bold text-lg mt-3">NAME - 綴</h3>
+                    <p class="text-sm text-gray-600">TVアニメ「好きな子がめがねを忘れた」OPテーマソング (作詞)</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto text-center max-w-5xl px-4">
+            <h3 class="font-extrabold text-2xl mb-4">Fan Page</h3>
+            <a href="https://otoiro.co.jp/" target="_blank" class="inline-block mb-8 transform hover:scale-105 transition-transform">
+                <img src="https://otoiro.co.jp/wp/wp-content/themes/otoirofirst_2024_R_v03/images/logo2023R_white.svg" alt="OTOIRO Logo" class="h-8 icon-white">
+            </a>
+            <p class="text-sm text-gray-400 mb-2">Developed with Gemini</p>
+            <p class="text-xs text-gray-500">&copy; DECO*27 / OTOIRO Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Modals Container -->
+    <div id="modals-container">
+        <!-- Modal 1 -->
+        <div id="modal-1" class="modal pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 opacity-0">
+            <div class="modal-content bg-white text-left rounded-lg shadow-xl p-6 m-4 w-full max-w-md relative overflow-y-auto">
+                <button class="modal-close absolute top-3 right-3 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+                <h3 class="text-xl font-bold mb-1">相愛性理論</h3>
+                <p class="text-sm text-gray-500 mb-4">2010.4.21 Release</p>
+                <h4 class="font-bold mb-2">TRACK LIST</h4>
+                <ol class="list-decimal list-inside text-sm space-y-1 text-gray-700">
+                    <li>相愛性理論</li><li>ハルイチ。</li><li>愛+K=aKi</li><li>心壊サミット</li><li>愛言葉</li><li>恋様シート</li><li>僕みたいな君、君みたいな僕。</li><li>キミ以上、ボク未満。</li><li>好きよ好きよも好きのうち</li><li>罪と罰</li><li>"bye-bye" by my 愛</li><li>愛 think so,</li><li>二息歩行</li><li>一人ぼっちで二人きり</li><li>愛 think so, feat. とぴ</li><li>ハルイチ。 (kous Remix)</li><li>愛言葉 (sasakure.UK Remix)</li><li>相愛性理論 (Treow Remix)</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Modal 2 -->
+        <div id="modal-2" class="modal pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 opacity-0">
+            <div class="modal-content bg-white text-left rounded-lg shadow-xl p-6 m-4 w-full max-w-md relative overflow-y-auto">
+                <button class="modal-close absolute top-3 right-3 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+                <h3 class="text-xl font-bold mb-1">愛迷エレジー</h3>
+                <p class="text-sm text-gray-500 mb-4">2010.12.15 Release</p>
+                <h4 class="font-bold mb-2">TRACK LIST</h4>
+                <ol class="list-decimal list-inside text-sm space-y-1 text-gray-700">
+                    <li>entree</li><li>モザイクロール feat. marina</li><li>ショコラビーツ feat. 初音ミク</li><li>トリノアイウタ feat. GUMI</li><li>愛迷エレジー feat. marina</li><li>飴模様 feat. GUMI</li><li>未来世 feat. とぴ</li><li>ベリーブルー (DECO*27 Vocal Mix)</li><li>弱虫モンブラン feat. marina</li><li>outree</li><li>愛言葉(sasakure.UK Sweets Remix) feat. mirto</li><li>弱虫モンブラン(ELECTROCUTICA White Remix) feat. GUMI</li><li>モザイクロール(kous DR Remix) feat. 初音ミク</li><li>むかしむかしのきょうのぼく feat. 初音ミク</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Modal 3 -->
+        <div id="modal-3" class="modal pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 opacity-0">
+            <div class="modal-content bg-white text-left rounded-lg shadow-xl p-6 m-4 w-full max-w-md relative overflow-y-auto">
+                <button class="modal-close absolute top-3 right-3 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+                <h3 class="text-xl font-bold mb-1">ラブカレンダー</h3>
+                <p class="text-sm text-gray-500 mb-4">2012.7.25 Release</p>
+                <h4 class="font-bold mb-2">TRACK LIST</h4>
+                <ol class="list-decimal list-inside text-sm space-y-1 text-gray-700">
+                    <li>1+1=1 feat. とぴ</li><li>RT feat. とぴ</li><li>甘宿り feat. 中川翔子</li><li>エゴママ feat. marina -Album Mix-</li><li>ライトラグ feat. とぴ -Album Mix-</li><li>27 -DECO*27 Vocal Mix-</li><li>砂時計 feat. とぴ -Album Mix-</li><li>お留守番人 feat. marina</li><li>恋距離遠愛 feat. とぴ -Album Mix-</li><li>帰想本能 feat. 悠木碧</li><li>フタリ座 feat. とぴ</li><li>声声 feat. とぴ</li><li>愛言葉 feat. とぴ -Piano Parallel Mix- (BonusTrack)</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Modal Collection -->
+        <div id="modal-collection" class="modal pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 opacity-0">
+            <div class="modal-content bg-white text-left rounded-lg shadow-xl p-6 m-4 w-full max-w-lg relative overflow-y-auto">
+                <button class="modal-close absolute top-3 right-3 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+                <h3 class="text-xl font-bold mb-1">DECO*27 VOCALOID COLLECTION 2008~2012</h3>
+                <p class="text-sm text-gray-500 mb-4">2013.12.18 Release</p>
+                <h4 class="font-bold mb-2">TRACK LIST</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 text-sm text-gray-700">
+                    <div>
+                        <p class="font-semibold mb-1">DISC.1</p>
+                        <ol class="list-decimal list-inside space-y-1">
+                           <li>愛言葉 feat. 初音ミク</li><li>僕みたいな君、君みたいな僕。 feat. 初音ミク</li><li>相愛性理論 feat. 初音ミク</li><li>心壊サミット feat. 初音ミク</li><li>罪と罰 feat. 初音ミク</li><li>ゆめゆめ feat. 初音ミク</li><li>むかしむかしのきょうのぼく feat. 初音ミク</li><li>二息歩行 feat. 初音ミク</li><li>キミ以上、ボク未満。 feat. 初音ミク</li><li>愛迷エレジー feat. 初音ミク</li><li>モザイクロール feat. GUMI</li><li>弱虫モンブラン feat. GUMI</li><li>ペダルハート feat. GUMI</li><li>愛言葉Ⅱ feat. 初音ミク</li>
+                        </ol>
+                    </div>
+                    <div class="mt-4 md:mt-0">
+                        <p class="font-semibold mb-1">DISC.2</p>
+                        <ol class="list-decimal list-inside space-y-1">
+                            <li>砂時計 feat. 初音ミク</li><li>恋距離遠愛feat. 初音ミク</li><li>ハルイチ。feat. 初音ミク</li><li>オートスコピー feat. 初音ミク</li><li>隠恋慕 feat. 初音ミク</li><li>愛 think so, feat. 初音ミク</li><li>No You, No Me feat. 初音ミク</li><li>ダミーダミー feat. 初音ミク</li><li>ラヴゲイザー feat. 初音ミク</li><li>帰想本能 feat. 初音ミク</li><li>ショコラビーツ feat. 初音ミク</li><li>リノリウム feat. GUMI</li><li>僕の名前は feat. GUMI</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 4 -->
+        <div id="modal-4" class="modal pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 opacity-0">
+            <div class="modal-content bg-white text-left rounded-lg shadow-xl p-6 m-4 w-full max-w-md relative overflow-y-auto">
+                <button class="modal-close absolute top-3 right-3 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+                <h3 class="text-xl font-bold mb-1">Conti New</h3>
+                <p class="text-sm text-gray-500 mb-4">2014.3.26 Release</p>
+                <h4 class="font-bold mb-2">TRACK LIST</h4>
+                <ol class="list-decimal list-inside text-sm space-y-1 text-gray-700">
+                    <li>ストリーミングハート feat. 初音ミク</li><li>おじゃま虫 feat. 初音ミク</li><li>毒占欲 feat. 初音ミク</li><li>Lonely Shit feat. 初音ミク</li><li>Starlight Girl feat. 初音ミク</li><li>たんこぶベイベ feat. 初音ミク</li><li>大掃除 feat. 初音ミク</li><li>音偽バナシ feat. 初音ミク</li><li>アンチビートfeat. 初音ミク</li><li>妄想税 feat. 初音ミク</li><li>an feat. 初音ミク</li><li>8月31日 feat. 初音ミク</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Modal 5 -->
+        <div id="modal-5" class="modal pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 opacity-0">
+            <div class="modal-content bg-white text-left rounded-lg shadow-xl p-6 m-4 w-full max-w-md relative overflow-y-auto">
+                <button class="modal-close absolute top-3 right-3 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+                <h3 class="text-xl font-bold mb-1">GHOST</h3>
+                <p class="text-sm text-gray-500 mb-4">2016.9.25 Release</p>
+                <h4 class="font-bold mb-2">TRACK LIST</h4>
+                <ol class="list-decimal list-inside text-sm space-y-1 text-gray-700">
+                    <li>ゴーストルール</li><li>リバーシブル・キャンペーン</li><li>LOVE DOLL</li><li>散散駄目調子</li><li>妄想感傷代償連盟</li><li>いいや</li><li>正義のタレット</li><li>ライアーダンス</li><li>Find The Light</li><li>生心病</li><li>針鼠</li><li>Sprite Girl</li><li>at</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Modal 6 -->
+        <div id="modal-6" class="modal pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 opacity-0">
+            <div class="modal-content bg-white text-left rounded-lg shadow-xl p-6 m-4 w-full max-w-md relative overflow-y-auto">
+                <button class="modal-close absolute top-3 right-3 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+                <h3 class="text-xl font-bold mb-1">アンドロイドガール</h3>
+                <p class="text-sm text-gray-500 mb-4">2019.5.22 Release</p>
+                <h4 class="font-bold mb-2">TRACK LIST</h4>
+                <ol class="list-decimal list-inside text-sm space-y-1 text-gray-700">
+                    <li>Reunion</li><li>アンドロイドガール</li><li>スクランブル交際</li><li>モスキート</li><li>乙女解剖</li><li>人質交換</li><li>シンセカイ案内所</li><li>サイコグラム</li><li>夜行性ハイズ</li><li>ヒバナ -Reloaded-</li><li>愛言葉III</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Modal 7 -->
+        <div id="modal-7" class="modal pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 opacity-0">
+            <div class="modal-content bg-white text-left rounded-lg shadow-xl p-6 m-4 w-full max-w-md relative overflow-y-auto">
+                <button class="modal-close absolute top-3 right-3 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+                <h3 class="text-xl font-bold mb-1">アンデッドアリス</h3>
+                <p class="text-sm text-gray-500 mb-4">2020.12.16 Release</p>
+                <h4 class="font-bold mb-2">TRACK LIST</h4>
+                <ol class="list-decimal list-inside text-sm space-y-1 text-gray-700">
+                    <li>ネオネオン</li><li>アンデッドアリス</li><li>フェイクアクター</li><li>勘違い性反希望症</li><li>君が嫌いだ</li><li>依存香炉</li><li>秘宴</li><li>なになに</li><li>ネガティブ進化論</li><li>ポジティブ・パレード</li><li>二息歩行 (Reloaded)</li><li>乙女解剖 (TeddyLoid Alllies Remix)</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Modal 8 -->
+        <div id="modal-8" class="modal pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 opacity-0">
+            <div class="modal-content bg-white text-left rounded-lg shadow-xl p-6 m-4 w-full max-w-md relative overflow-y-auto">
+                <button class="modal-close absolute top-3 right-3 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+                <h3 class="text-xl font-bold mb-1">MANNEQUIN</h3>
+                <p class="text-sm text-gray-500 mb-4">2022.3.9 Release</p>
+                <h4 class="font-bold mb-2">TRACK LIST</h4>
+                <ol class="list-decimal list-inside text-sm space-y-1 text-gray-700">
+                    <li>ヴァンパイア</li><li>アニマル</li><li>状態異常彼女</li><li>U</li><li>シンデレラ</li><li>ケサランパサラン</li><li>ギフト</li><li>パラサイト</li><li>ジレンマ</li><li>おじゃま虫II</li><li>モザイクロール (Reloaded)</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Modal 9 -->
+        <div id="modal-9" class="modal pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 opacity-0">
+            <div class="modal-content bg-white text-left rounded-lg shadow-xl p-6 m-4 w-full max-w-lg relative overflow-y-auto">
+                <button class="modal-close absolute top-3 right-3 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+                <h3 class="text-xl font-bold mb-1">TRANSFORM</h3>
+                <p class="text-sm text-gray-500 mb-4">2024.11.27 Release</p>
+                <h4 class="font-bold mb-2">TRACK LIST</h4>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 text-sm text-gray-700">
+                    <div>
+                        <p class="font-semibold mb-1">DISC.1</p>
+                        <ol class="list-decimal list-inside space-y-1">
+                           <li>Rebirth</li><li>ルーキー</li><li>ハオ</li><li>ラビットホール (Reloaded)</li><li>友達バリア</li><li>あいたい星人</li><li>サッドガール・セックス</li><li>モニタリング</li><li>本命</li><li>ネバーランド</li><li>キスミーザウルス</li>
+                        </ol>
+                    </div>
+                    <div class="mt-4 md:mt-0">
+                        <p class="font-semibold mb-1">DISC.2</p>
+                        <ol class="list-decimal list-inside space-y-1">
+                            <li>キメラ</li><li>サラマンダー</li><li>毒林檎</li><li>ボルテッカー</li><li>ラビットホール</li><li>ゾンビ</li><li>宇宙散歩</li><li>マネキン</li><li>ブループラネット</li><li>愛言葉IV</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for Modal functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const modalTriggers = document.querySelectorAll('[data-modal-target]');
+            const modalsContainer = document.getElementById('modals-container');
+
+            // Function to open a modal
+            const openModal = (modalId) => {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.classList.remove('opacity-0', 'pointer-events-none');
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                }
+            };
+
+            // Function to close a modal
+            const closeModal = (modal) => {
+                if (modal) {
+                    modal.classList.add('opacity-0', 'pointer-events-none');
+                    document.body.style.overflow = ''; // Restore background scrolling
+                }
+            };
+
+            // Add event listeners to all modal triggers
+            modalTriggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const modalId = trigger.getAttribute('data-modal-target');
+                    openModal(modalId);
+                });
+            });
+
+            // Add a single event listener to the modals container for closing
+            modalsContainer.addEventListener('click', (event) => {
+                // Close if the close button or the modal backdrop is clicked
+                if (event.target.classList.contains('modal-close') || event.target.classList.contains('modal')) {
+                    const modal = event.target.closest('.modal');
+                    closeModal(modal);
+                }
+            });
+
+            // Close modal with the Escape key
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    const openModal = document.querySelector('.modal:not(.pointer-events-none)');
+                    closeModal(openModal);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
